@@ -6,11 +6,11 @@ pipeline {
   stages {
     stage ('initialise'){
       steps {
-      sh ''''
+      sh '''
             echo"PATH = ${PATH}"
             echo "M2_HOME = ${M2_HOME}"
           
-          ''''
+          '''
       }
     }
     
