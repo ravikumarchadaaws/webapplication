@@ -18,6 +18,12 @@ pipeline {
     }
     
    }
+    stage ('SCA') {
+      steps {
+      sh 'whoami'
+    }
+    
+   }
  }
 }
 
