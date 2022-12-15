@@ -12,13 +12,13 @@ pipeline {
             ''' 
       }
     }
-    stage ('Build') {
+    stages ('Build') {
       steps {
       sh 'mvn clean package'
     }
     }
-      Stage ('Source Composition Analysis') {
-        Steps {
+      stages ('Source Composition Analysis') {
+        steps {
         sh 'whoami'
      }
   }
