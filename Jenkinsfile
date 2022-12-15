@@ -16,12 +16,8 @@ pipeline {
       steps {
       sh 'mvn clean package'
     }
-    }
-      Stage ('Source Composition Analysis') {
-        steps {
-        sh 'whoami'
-     }
-  }
+    
+   }
  }
 }
 
