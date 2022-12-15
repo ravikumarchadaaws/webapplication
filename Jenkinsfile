@@ -24,6 +24,12 @@ pipeline {
     }
     
    }
+    stage ('Nikto Scan') {
+      steps {
+      sh 'nikto -host 13.115.215.63 -port 8080'
+    }
+    
+   }
  }
 }
 
