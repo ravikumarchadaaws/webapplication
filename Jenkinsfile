@@ -20,7 +20,7 @@ pipeline {
    }
     stage ('SCA') {
       steps {
-      sh 'whoami'
+      sh 'id'
     }
     
    }
