@@ -18,23 +18,14 @@ pipeline {
     }
     
    }
-    stage ('SCA') {
-      steps {
-      sh 'id'
-    }
     
-   }
-    stage ('Nikto Scan') {
-      steps {
-      sh 'nikto -host 35.77.198.45 -port 8080'
-    }
-   }
-    stage ('DAST') {
-      steps {
-      sh 'steps'
-    }
-    
-   }
+   stage ('Deploy-To-Tomcat'){
+		steps {
+			sshagent(['tomcat']) {
+				sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@18.183.216.53:/root/tomcatnew/apache-tomcat-9.0.70/webapps/webapp.war'
+				}
+			}
+}
  }
 }
 
